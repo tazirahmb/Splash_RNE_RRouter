@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import {
-  View
-} from 'react-native';
-import {
-  Text,
-  Button,
-  Input
-} from 'react-native-elements';
+import { View } from 'react-native';
+import { Text, Button, Input } from 'react-native-elements';
 
 export default class SignIn extends Component {
   

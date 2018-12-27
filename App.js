@@ -4,6 +4,25 @@ import { ThemeProvider } from 'react-native-elements';
 import SplashScreen from 'react-native-splash-screen';
 import SignIn from './screen/signin';
 
+export default class App extends Component {
+  
+  componentDidMount() {
+    SplashScreen.hide()
+  }
+
+  render() {
+    return (
+      <ThemeProvider theme={theme}>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="#4F6D7A"
+        />
+        <SignIn/>
+      </ThemeProvider>
+    );
+  }
+}
+
 const theme = {
   Button: {
     titleStyle: {
@@ -39,22 +58,3 @@ const theme = {
     }
   }
 };
-
-export default class App extends Component {
-  
-  componentDidMount() {
-    SplashScreen.hide()
-  }
-
-  render() {
-    return (
-      <ThemeProvider theme={theme}>
-        <StatusBar
-          barStyle="light-content"
-          backgroundColor="#4F6D7A"
-        />
-        <SignIn/>
-      </ThemeProvider>
-    );
-  }
-}
